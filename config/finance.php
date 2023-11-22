@@ -16,6 +16,6 @@ return [
 
         'disbursement_type' => env('INTRANET_TABLE_DISBURSEMENT_TYPE', 'finance.disbursement_type'),
 
-        'disbursement_category' => env('INTRANET_TABLE_DISBURSEMENT_CAGETORY', 'finance.disbursement_category'),
+        'disbursement_category' => env('INTRANET_TABLE_DISBURSEMENT_CATEGORY', 'finance.disbursement_category'),
     ],
 ];
