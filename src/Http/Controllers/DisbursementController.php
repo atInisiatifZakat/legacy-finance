@@ -63,6 +63,7 @@ final class DisbursementController
                     'sourceId' => $request->get('source_id', ''),
                     'sourceName' => $request->get('source_name', ''),
                 ]),
+                'request_date' => $request->date('request_date'),
                 'items' => DisbursementItemData::collection(
                     $request->input('items')
                 ),

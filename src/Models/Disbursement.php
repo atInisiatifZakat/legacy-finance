@@ -16,6 +16,7 @@ final class Disbursement extends Model
 
     protected $casts = [
         'metadata' => 'array',
+        'advances_used_date' => 'array'
     ];
 
     public function getConnectionName(): string
