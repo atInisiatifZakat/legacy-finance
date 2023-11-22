@@ -10,6 +10,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 final class Disbursement extends Model
 {
+    public $timestamps = false;
+
     protected $guarded = [];
 
     protected $casts = [

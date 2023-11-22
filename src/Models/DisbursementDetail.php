@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 final class DisbursementDetail extends Model
 {
+    public $timestamps = false;
+
     protected $guarded = [];
 
     public function getConnectionName(): string

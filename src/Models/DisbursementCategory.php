@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 
 final class DisbursementCategory extends Model
 {
+    public $timestamps = false;
+    
     protected $guarded = [];
 
     protected $casts = [
