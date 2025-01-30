@@ -74,7 +74,7 @@ final class StoreNewDisbursement
         return $model?->getLastSequenceNumber() ?? '0';
     }
 
-    private function generateNumber(Enums\DisbursementCategory $category, Disbursement $um = null): string
+    private function generateNumber(Enums\DisbursementCategory $category, ?Disbursement $um = null): string
     {
         if ($um) {
             /** @var string */

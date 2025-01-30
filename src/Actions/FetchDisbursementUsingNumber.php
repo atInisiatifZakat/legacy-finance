@@ -10,10 +10,10 @@ final class FetchDisbursementUsingNumber
 {
     public function handle(string $disbursementNo): Disbursement
     {
-            $builder = Disbursement::query()
-                ->where('disbursement_no', $disbursementNo)
-                ->with(['type', 'type.category', 'details'])->first();
+        $builder = Disbursement::query()
+            ->where('disbursement_no', $disbursementNo)
+            ->with(['type', 'type.category', 'details'])->first();
 
-            return $builder;
+        return $builder;
     }
 }

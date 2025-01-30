@@ -38,6 +38,5 @@ final class NewDisbursementData extends Data
         public readonly string|int|null $reffId = null,
         public readonly ?array $advancesUsedDate = null,
         public readonly ?SourceApplicationData $app = null,
-    ) {
-    }
+    ) {}
 }

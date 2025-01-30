@@ -6,7 +6,6 @@ namespace Inisiatif\LegacyFinance\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Inisiatif\LegacyFinance\Models\DisbursementCategory;
 
 final class DisbursementType extends Model
 {

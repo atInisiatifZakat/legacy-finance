@@ -11,6 +11,5 @@ final class SourceApplicationData extends Data
     public function __construct(
         public readonly null|string|int $sourceId = null,
         public readonly ?string $sourceName = null,
-    ) {
-    }
+    ) {}
 }

@@ -16,6 +16,5 @@ final class DisbursementItemData extends Data
         public readonly string $description,
         public readonly int $quantity,
         public readonly float|int $amount
-    ) {
-    }
+    ) {}
 }
