@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace Inisiatif\LegacyFinance\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Inisiatif\LegacyFinance\Enums\DisbursementCategory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Inisiatif\LegacyFinance\Models\DisbursementCategory;
 
 final class DisbursementType extends Model
 {
@@ -14,7 +15,7 @@ final class DisbursementType extends Model
     protected $guarded = [];
 
     protected $casts = [
-        'disbursement_category_id' => DisbursementCategory::class,
+        'disbursement_category_id' => 'string',
     ];
 
     public function getConnectionName(): string
@@ -25,5 +26,10 @@ final class DisbursementType extends Model
     public function getTable(): string
     {
         return \config('finance.tables.disbursement_type', parent::getTable());
+    }
+
+    public function category(): BelongsTo
+    {
+        return $this->belongsTo(DisbursementCategory::class, 'disbursement_category_id');
     }
 }
