@@ -23,7 +23,7 @@ final class StoreNewDisbursement
         $um = Disbursement::query()->find($data->reffId);
 
         $disbursementNumber = $this->generateNumber(
-            $type->getAttribute('disbursement_category_id'), $um
+            Enums\DisbursementCategory::from((int) $type->getAttribute('disbursement_category_id')), $um
         );
 
         return DB::transaction(static function () use ($data, $disbursementNumber): Disbursement {
