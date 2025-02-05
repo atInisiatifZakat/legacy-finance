@@ -39,6 +39,11 @@ final class Disbursement extends Model
         return $this->hasMany(DisbursementDetail::class);
     }
 
+    public function parent(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'reff_id');
+    }
+
     public static function createNew(array $attributes, array $metadata = []): self
     {
         /** @var self */
